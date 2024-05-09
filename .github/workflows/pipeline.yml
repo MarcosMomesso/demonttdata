@@ -49,24 +49,29 @@ jobs:
         path: .\.sonar\scanner
         key: ${{ runner.os }}-sonar-scanner
         restore-keys: ${{ runner.os }}-sonar-scanner
+        
     - name: confirma insalação dotnet tool list --global
       run: dotnet tool list --global
-     
-    - name: Install SonarCloud scanner
+      
+    - name: install SonarScanner
+      run: dotnet tool install --global dotnet-sonarscanner
+      
+    - name: update var SonarCloud scanner
       if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       shell: pwsh
       run: |
         New-Item -Path .\.sonar\scanner -ItemType Directory
         dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+        
     - name: Build and analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      shell: bash
+      shell: pwsh
       run: |
-        ~/.dotnet/tools/dotnet-sonarscanner begin /k:"MarcosMomesso_demonttdata" /o:"marcosmomesso" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+        dotnet sonarscanner begin /k:"MarcosMomesso_demonttdata" /o:"marcosmomesso" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
          dotnet build
-        ~/.dotnet/tools/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}" 
+        dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}" 
     
     # final trecho analise sonarcloud
 
