@@ -49,6 +49,8 @@ jobs:
         path: .\.sonar\scanner
         key: ${{ runner.os }}-sonar-scanner
         restore-keys: ${{ runner.os }}-sonar-scanner
+    - name: dotnet tool list --global
+    - name: dotnet tool install --global dotnet-sonarscanner
     - name: Install SonarCloud scanner
       if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       shell: pwsh
@@ -62,7 +64,7 @@ jobs:
       shell: bash
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"MarcosMomesso_demonttdata" /o:"marcosmomesso" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-        dotnet build
+         dotnet build
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}" 
     
     # final trecho analise sonarcloud
