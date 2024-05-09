@@ -2,7 +2,7 @@ using FluentAssertions;
 using WebApi.Domain;
 using Xunit;
 
-namespace web_app_sample_tests
+namespace api.tests
 {
     public class PromotestatusTest
     {
