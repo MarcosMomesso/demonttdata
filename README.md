@@ -8,7 +8,9 @@ Desafio técnico NTTDATA
 
 ## Objetivo ☕️
 
-Crie um pipeline de CI/CD usando o GitHub Actions para um projeto simples de aplicação web
+<p>Crie um pipeline de CI/CD usando o GitHub Actions para um projeto simples de aplicação web</p> 
+
+![fluxo imagem ci e cd](https://github.com/MarcosMomesso/demonttdata/blob/main/files/desenho%20fluxo%20CI%20e%20CD%20NTTDATA%20gitactions.jpg)
 
 ## Repositório 🎉
 Repositório referente aos arquivos de projeto: **[repositório demo nttdata](https://github.com/MarcosMomesso/demonttdata)** 
