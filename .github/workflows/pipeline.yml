@@ -49,8 +49,9 @@ jobs:
         path: .\.sonar\scanner
         key: ${{ runner.os }}-sonar-scanner
         restore-keys: ${{ runner.os }}-sonar-scanner
-    - name: dotnet tool list --global
-    - name: dotnet tool install --global dotnet-sonarscanner
+    - name: confirma insalação dotnet tool list --global
+      run: dotnet tool list --global
+     
     - name: Install SonarCloud scanner
       if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       shell: pwsh
