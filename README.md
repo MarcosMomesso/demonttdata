@@ -10,8 +10,6 @@ Desafio técnico NTTDATA
 
 <p>Crie um pipeline de CI/CD usando o GitHub Actions para um projeto simples de aplicação web</p> 
 
-![fluxo imagem ci e cd](https://github.com/MarcosMomesso/demonttdata/blob/main/files/desenho%20fluxo%20CI%20e%20CD%20NTTDATA%20gitactions.jpg)
-
 ## Repositório 🎉
 Repositório referente aos arquivos de projeto: **[repositório demo nttdata](https://github.com/MarcosMomesso/demonttdata)** 
 <p>Projeto contem 3 principais .csprojec composto em uma unica solution</p>
@@ -56,8 +54,14 @@ webapp na azure com as credenciais configuradas respectivamente pelo ambientes a
 ## Diferenciais ✨
 <ul>
   <li> - Criar um desenho simples de arquitetura CI, CD</li>
+
+![fluxo imagem ci e cd](https://github.com/MarcosMomesso/demonttdata/blob/main/files/fluxoCIeCD.jpg)
+  
   <li> - Criar uma action do tipo TypeScript que faça execução de algum linter ou quality gates</li>
-  <li> - Loreipsum</li>
+  <li> - Executar uma análise estática usando a ferramenta SonarQube ou alguma outra similiar</li>
+  
+  **[SonarCloud - Ferramenta para analise da qualidade estatica do código](https://sonarcloud.io/project/overview?id=MarcosMomesso_demonttdata)**
+
   <li> - Loreipsum</li>
   <li> - Loreipsum</li>
 </ul>
