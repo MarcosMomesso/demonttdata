@@ -21,19 +21,19 @@ Repositório referente aos arquivos de projeto: **[repositório demo nttdata](ht
 </ul>
 
 ## Environments 🔥
-### Prerequisites
+### Pre-requisitos
 webapp na azure com as credenciais configuradas respectivamente pelo ambientes a seguir
 
-**[Desenvovimento](https://webappnttdata.azurewebsites.net/)**
+**[Link Ambiente Desenvovimento](https://webappnttdata.azurewebsites.net/)**
 
 <p>Foco para Desenvolvedor com CI e CD a cada novo pullrequest ou push** na branch main</p>
 <p>**Deixado intencionalmente a cada push para facilidar o exemplo, mas poderias também restringir a apenas ao pr deixa do a estratégia de merge mais robusta</p>
 
-**[Homologação](https://webappnttdatahmg.azurewebsites.net/)**
+**[Link Ambiente Homologação](https://webappnttdatahmg.azurewebsites.net/)**
 
 <p>Foco em validações, a entrada para este ambiente, precisa obrigatóriamente ter passado pelo ambiente anterior + a aprovação de um usuário específico.</p>
 
-**[Produção](https://webappnttdataprd.azurewebsites.net/)**
+**[Link Ambiente Produção](https://webappnttdataprd.azurewebsites.net/)**
 
 <p><Ambiente de produção, precisa obrigatóriamente ter passado e validado pelas etadas anteriores + nova aprovação</p>
 
@@ -60,7 +60,7 @@ webapp na azure com as credenciais configuradas respectivamente pelo ambientes a
   <li> - Criar uma action do tipo TypeScript que faça execução de algum linter ou quality gates</li>
   <li> - Executar uma análise estática usando a ferramenta SonarQube ou alguma outra similiar</li>
   
-  **[SonarCloud - Ferramenta para analise da qualidade estatica do código](https://sonarcloud.io/project/overview?id=MarcosMomesso_demonttdata)**
+  **[Link acesso ao SonarCloud - Ferramenta para analise da qualidade estatica do código](https://sonarcloud.io/project/overview?id=MarcosMomesso_demonttdata)**
 
   <li> - Loreipsum</li>
   <li> - Loreipsum</li>
