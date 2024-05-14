@@ -6,8 +6,10 @@ name: pipeline CI, CD webapp NTTDATA
 on:
   push:
     branches: [ "main" ]
+    paths: ["api/webapi/**","webapp/**"]
   pull_request:
     branches: [ "main" ]
+    paths: ["api/webapi/**","webapp/**"]
 
 jobs:
   build:
